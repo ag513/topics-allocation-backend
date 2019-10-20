@@ -1,6 +1,0 @@
-{"message":"Express app started on port 3000","level":"info"}
-{"message":"::1 - - [20/Oct/2019:17:35:06 +0000] \"GET / HTTP/1.1\" 200 260 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"\n","level":"info"}
-{"message":"::1 - - [20/Oct/2019:17:35:15 +0000] \"GET /ping HTTP/1.1\" 200 4 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.120 Safari/537.36\"\n","level":"info"}
-{"message":"Express app started on port 3000","level":"info"}
-{"message":"Express app started on port 3000","level":"info"}
-{"message":"Express app started on port 3000","level":"info"}

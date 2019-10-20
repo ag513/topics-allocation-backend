@@ -1,6 +1,0 @@
-{"message":"Express app started on port 3000","level":"info"}
-{"message":"::1 - - [16/Jul/2019:18:19:27 +0000] \"POST /api/v1/payments HTTP/1.1\" 404 46 \"-\" \"PostmanRuntime/7.15.0\"\n","level":"info"}
-{"message":"Express app started on port 3000","level":"info"}
-{"message":"::1 - - [16/Jul/2019:18:20:39 +0000] \"POST /api/v1/payments HTTP/1.1\" 200 243 \"-\" \"PostmanRuntime/7.15.0\"\n","level":"info"}
-{"level":"error"}
-{"message":"::1 - - [16/Jul/2019:18:24:03 +0000] \"GET /api/v1/payments?id=5d2e1577c637cc957b57d446 HTTP/1.1\" 404 19 \"-\" \"PostmanRuntime/7.15.0\"\n","level":"info"}
