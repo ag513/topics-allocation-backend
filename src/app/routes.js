@@ -12,6 +12,7 @@ const { authenticate } = require('./middlewares/authenticate');
 const { healthCheck } = require('./controllers/healthCheck');
 const loginRouter = require('./controllers/login');
 const villageRouter = require('./controllers/villages');
+const userRouter = require('./controllers/user');
 
 /**
  * Adding version
@@ -20,6 +21,7 @@ const versioning = app => {
   const router = require('express').Router();
   router.use(authenticate);
   router.use('/villages', villageRouter);
+  router.use('/users', userRouter);
   return router;
 };
 

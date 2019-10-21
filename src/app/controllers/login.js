@@ -7,6 +7,7 @@
 /**
  * Module dependencies.
  */
+const User = require('./../models/User');
 const loginRouter = require('express').Router();
 
 /**
@@ -14,9 +15,11 @@ const loginRouter = require('express').Router();
  */
 const login = async (req, res) => {
   try {
-    const { username, password } = req.body;
-
-    res.send('Logged In');
+    const { email, password } = req.body;
+    const userDetails = await User.findByCredentials(email, password);
+    const token = await userDetails.generateAuthToken();
+    res.send({ data: { user: userDetails.removeUnwantedFields(), token } });
+    // res.send('Logged In');
   } catch (err) {
     res.status(400).send(JSON.stringify(err, ['stack'], 4));
   }
