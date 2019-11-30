@@ -4,14 +4,15 @@
  */
 const listEndpoints = require('express-list-endpoints');
 
-const { authenticate } = require('./middlewares/authenticate');
+const {authenticate} = require('./middlewares/authenticate');
 
 /**
  * import controllers
  */
-const { healthCheck } = require('./controllers/healthCheck');
+const {healthCheck} = require('./controllers/healthCheck');
 const loginRouter = require('./controllers/login');
-const villageRouter = require('./controllers/villages');
+const topicRouter = require('./controllers/topics');
+const preferencesRouter = require('./controllers/preferences');
 const userRouter = require('./controllers/user');
 
 /**
@@ -19,9 +20,10 @@ const userRouter = require('./controllers/user');
  */
 const versioning = app => {
   const router = require('express').Router();
-  router.use(authenticate);
-  router.use('/villages', villageRouter);
+  // router.use(authenticate);
+  router.use('/topics', topicRouter);
   router.use('/users', userRouter);
+  router.use('/preferences', preferencesRouter);
   return router;
 };
 

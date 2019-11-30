@@ -1,0 +1,260 @@
+{
+	"info": {
+		"_postman_id": "8c30f534-89e6-4601-beeb-be413df3ab6a",
+		"name": "ag513",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Creating a Topic",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Testing\",\n\t\"link\":\"testing123.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/topics",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all active topics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/topics",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"topics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Topic",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\":\"Testing\",\n\t\"link\":\"testing.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/topics/5de29b84b474a5290b5aa4c2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"topics",
+						"5de29b84b474a5290b5aa4c2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Topic",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/topics/5de29b84b474a5290b5aa4c2",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"topics",
+						"5de29b84b474a5290b5aa4c2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a Preference",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\":\"5dada2d4cd45eb99939aecc9\",\n\t\"name\":\"Matta Harish\",\n\t\"p1\":\"topic1\",\n\t\"p2\":\"topic2\",\n\t\"p3\":\"topic3\",\n\t\"p4\":\"topic4\",\n\t\"p5\":\"topic5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/preferences",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"preferences"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Preference",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"studentId\":\"5dada2d4cd45eb99939aecc8\",\n\t\"name\":\"Matta Kumar\",\n\t\"p1\":\"topic1000\",\n\t\"p2\":\"topic200\",\n\t\"p3\":\"topic3\",\n\t\"p4\":\"topic4\",\n\t\"p5\":\"topic5\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/preferences/5dada2d4cd45eb99939aecc8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"preferences",
+						"5dada2d4cd45eb99939aecc8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get PReference",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api/v1/preferences?studentId=5dada2d4cd45eb99939aecc8",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"preferences"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "5dada2d4cd45eb99939aecc8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a User",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"matt@gmail.com\",\n\t\"password\":\"Harish123\",\n\t\"role\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api/v1/users/",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
